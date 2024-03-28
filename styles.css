@@ -1,0 +1,45 @@
+:root {
+  --main-golden: #ac893c;
+  --main-dark-gray: #222222;
+  --main-light-gray: #2d2d2d;
+}
+
+body {
+  background: linear-gradient(90deg, var(--main-dark-gray), var(--main-light-gray));
+  color: var(--main-golden);
+}
+
+.logo,
+.nav-item{
+  display: flex;
+  align-items: center;
+  
+  gap: 15px;
+}
+
+.logo img {
+  width: 100px;
+}
+
+.nav-item.settings{
+  margin-top: 20px;
+}
+
+.search input{
+  background: none;
+  border: none;
+  border: 2px solid var(--main-light-gray);
+  color: var(--main-golden);
+  border-radius: 1rem;
+  padding: 0.5rem;
+}
+
+.search input:focus{
+  outline: none;
+  border: 2px solid var(--main-golden);
+}
+
+.profile {
+  width: 40px;
+  border-radius: 120rem;
+}
