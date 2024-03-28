@@ -2,6 +2,19 @@
   --main-golden: #ac893c;
   --main-dark-gray: #222222;
   --main-light-gray: #2d2d2d;
+
+  --accent-dark-blue: #1f4068;
+  --accent-olive-green: #5c743d;
+  --accent-deep-red: #6c1b1b;
+  --accent-purple: #5e366e;
+  --accent-teal: #1b6a6a;
+
+  --neutral-light-gray: #d3d3d3;
+  --neutral-medium-gray: #808080;
+  --neutral-charcoal: #333333;
+  --neutral-beige: #e0d4b7;
+  --low-contrast-light-taupe: #c2b49a;
+  --neutral-navy-blue: #001f3f;
 }
 
 * {
@@ -20,7 +33,7 @@ body {
 
   display: grid;
   grid-template-columns: 1fr 3fr 1fr;
-  grid-template-rows: repeat(3, 1fr);
+  grid-template-rows: 200px repeat(2, 1fr);
   gap: 20px;
 }
 
@@ -61,10 +74,13 @@ body {
   grid-column-start: span 2;
   padding: 0 2.5rem;
   margin-top: -10px;
+  margin-left: -20px;
 
   display: grid;
   grid-template-rows: 100px 50px;
   gap: 20px;
+
+  background-color: var(--neutral-beige);
 }
 
 .header .top-row,
@@ -78,7 +94,7 @@ body {
 input[type="search"]{
   background: none;
   border: none;
-  border: 2px solid var(--main-light-gray);
+  border: 2px solid var(--low-contrast-light-taupe);
   color: var(--main-golden);
   border-radius: 2rem;
   padding: 1rem;
@@ -126,8 +142,10 @@ img.profile {
 
   background-color: var(--main-golden);
   color: var(--main-dark-gray);
-  border: 2px solid var(--main-light-gray);
+  border: none;
   outline: none;
+
+  cursor: pointer;
 }
 
 .options button:active{
