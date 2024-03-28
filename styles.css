@@ -59,16 +59,21 @@ body {
 
 .header{
   grid-column-start: span 2;
-  padding: 1.5rem 1rem;
+  padding: 0 2.5rem;
+  margin-top: -10px;
+
+  display: grid;
+  grid-template-rows: 100px 50px;
+  gap: 20px;
 }
 
-.header .top-row {
+.header .top-row,
+.header .bottom-row,
+.notif-profile{
   display: flex;
   align-items: center;
   gap: 20px;
 }
-
-
 
 input[type="search"]{
   background: none;
@@ -89,11 +94,53 @@ input[type="search"]:focus{
   border: 2px solid var(--main-golden);
 }
 
-.profile {
+.notif-profile{
+  margin-left: auto
+}
+
+img.profile {
   width: 40px;
   border-radius: 120rem;
 }
 
+.header .bottom-row{
+  display: flex;
+}
+
+.bottom-row img{
+  width: 60px;
+}
+
+.options{
+  margin-left: auto;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.options button{
+  border-radius: 2rem;
+  padding: 0.5rem 2rem;
+  font-size: 1rem;
+
+  background-color: var(--main-golden);
+  color: var(--main-dark-gray);
+  border: 2px solid var(--main-light-gray);
+  outline: none;
+}
+
+.options button:active{
+  background-color: var(--main-dark-gray);
+  color: var(--main-golden);
+}
+
 .projects{
   grid-row-start: span 2;
+}
+
+@media screen and (max-width: 768px) {
+  .sidebar{
+    display: none;
+  }
 }
