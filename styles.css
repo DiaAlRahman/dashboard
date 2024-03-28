@@ -6,6 +6,7 @@
   --accent-dark-blue: #1f4068;
   --accent-olive-green: #5c743d;
   --accent-deep-red: #6c1b1b;
+  --bright-red: #ff4d4d;
   --accent-purple: #5e366e;
   --accent-teal: #1b6a6a;
 
@@ -16,19 +17,19 @@
   --low-contrast-light-taupe: #c2b49a;
   --neutral-navy-blue: #001f3f;
 }
-@import url('https://fonts.googleapis.com/css2?family=Imbue:opsz@10..100&display=swap');
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Imbue", serif;
 }
 
 body {
   background-color: var(--main-light-gray);
   color: var(--main-golden);
 
-  font-family: "Imbue", serif;
+  position: relative;
 }
 
 .dashboard{
@@ -38,7 +39,6 @@ body {
   grid-template-columns: 1fr 3fr 1fr;
   grid-template-rows: 150px repeat(2, 1fr);
   gap: 20px;
-  font-family: "Imbue";
 }
 
 .sidebar {
@@ -86,6 +86,8 @@ body {
   color: var(--accent-deep-red);
 
   box-shadow: 0 2px 5px var(--main-golden);
+  position: sticky;
+  top: 0;
 }
 
 .header .top-row,
@@ -181,6 +183,11 @@ img.profile {
   background-color: var(--neutral-beige);
 }
 
+.project:hover{
+  border-left: 7px solid var(--bright-red);
+
+}
+
 .announcements{
   margin-bottom: 40px;
 }
@@ -191,7 +198,7 @@ img.profile {
   gap: 20px;
   background-color: var(--neutral-beige);
   padding: 20px;
-  margin-top: 20px;
+  margin-top: 5px;
   margin-right: 40px;
   border-radius: 8px;
 }
@@ -204,17 +211,27 @@ img.profile {
   border-bottom: solid 2px var(--low-contrast-light-taupe);
 }
 
+.announcement:hover{
+  box-shadow: -10px 5px 5px var(--accent-deep-red);
+}
+
 .announcement:last-child{
   border: none;
 }
 
 .trending-item{
   display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
 .trending img{
   width: 40px;
   border-radius: 120rem;
+}
+
+h4{
+  font-size: 1.4rem;
 }
 
 @media screen and (max-width: 768px) {
